@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pl" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeria projektów Pawła Opockiego — strony, aplikacje webowe i gry.">
+    <title>Projekty — Paweł Opocki</title>
+    <script>
+        document.documentElement.classList.remove("no-js");
+        try {
+            var t = localStorage.getItem("portfolio-theme");
+            if (t) document.documentElement.dataset.theme = t;
+            else if (window.matchMedia("(prefers-color-scheme: dark)").matches) document.documentElement.dataset.theme = "dark";
+        } catch (e) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Przejdź do treści</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Paweł<span>.</span>Opocki</a>
+            <nav class="main-nav" id="main-nav" aria-label="Nawigacja główna">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projekty.html" aria-current="page">Projekty</a></li>
+                    <li><a href="doswiadczenie.html">Doświadczenie</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="icon-button theme-toggle" type="button" aria-label="Zmień motyw">🌙</button>
+                <button class="icon-button nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Otwórz menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="container">
+            <header class="page-intro">
+                <p class="eyebrow">Galeria</p>
+                <h1>Moje projekty</h1>
+                <p class="lead">
+                    Wybrane prace wykonane na zajęciach i w wolnym czasie. Użyj filtrów,
+                    aby wyświetlić projekty z wybranej kategorii.
+                </p>
+            </header>
+
+            <section class="section" aria-labelledby="gallery-title">
+                <h2 id="gallery-title" class="visually-hidden">Galeria projektów</h2>
+
+                <div class="filter-bar" role="group" aria-label="Filtruj projekty">
+                    <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">Wszystkie</button>
+                    <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">Strony WWW</button>
+                    <button class="filter-btn" type="button" data-filter="app" aria-pressed="false">Aplikacje</button>
+                    <button class="filter-btn" type="button" data-filter="game" aria-pressed="false">Gry</button>
+                    <button class="filter-btn" type="button" data-filter="graphic" aria-pressed="false">Grafika</button>
+                </div>
+                <p id="project-count" class="field-hint" aria-live="polite"></p>
+
+                <ul class="gallery">
+                    <li class="project-card" data-category="web">
+                        <img src="images/project-portfolio.svg" width="640" height="400" loading="lazy"
+                             alt="Szkic strony portfolio: okno przeglądarki z awatarem, nagłówkiem i trzema kolorowymi kafelkami">
+                        <div class="project-body">
+                            <h3>Portfolio</h3>
+                            <p>Ta strona — osobista wizytówka z galerią projektów, blogiem i formularzem kontaktowym.</p>
+                            <ul class="tag-list">
+                                <li class="tag">HTML</li><li class="tag">CSS Grid</li><li class="tag">JS</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="project-card" data-category="web">
+                        <img src="images/project-blog.svg" width="640" height="400" loading="lazy"
+                             alt="Szkic wpisu blogowego: tytuł, data, zdjęcie nagłówkowe i kilka akapitów tekstu">
+                        <div class="project-body">
+                            <h3>Blog</h3>
+                            <p>Prosty szablon bloga z czytelną typografią i wygodną szerokością kolumny tekstu.</p>
+                            <ul class="tag-list">
+                                <li class="tag">HTML</li><li class="tag">CSS</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="project-card" data-category="app">
+                        <img src="images/project-weather.svg" width="640" height="400" loading="lazy"
+                             alt="Ikona pogody: słońce schowane za deszczową chmurą">
+                        <div class="project-body">
+                            <h3>Pogodynka</h3>
+                            <p>Aplikacja pokazująca prognozę pogody dla wybranego miasta na podstawie publicznego API.</p>
+                            <ul class="tag-list">
+                                <li class="tag">JavaScript</li><li class="tag">Fetch API</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="project-card" data-category="web app">
+                        <img src="images/project-shop.svg" width="640" height="400" loading="lazy"
+                             alt="Pomarańczowa torba na zakupy z etykietą rabatu minus 20 procent">
+                        <div class="project-body">
+                            <h3>Sklep</h3>
+                            <p>Makieta sklepu internetowego z listą produktów, filtrowaniem i koszykiem.</p>
+                            <ul class="tag-list">
+                                <li class="tag">HTML</li><li class="tag">Flexbox</li><li class="tag">JS</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="project-card" data-category="game">
+                        <img src="images/project-game.svg" width="640" height="400" loading="lazy"
+                             alt="Fioletowy pad do gier z krzyżakiem i czterema kolorowymi przyciskami">
+                        <div class="project-body">
+                            <h3>Gra zręcznościowa</h3>
+                            <p>Mała gra w przeglądarce napisana na hackathonie koła naukowego w 24 godziny.</p>
+                            <ul class="tag-list">
+                                <li class="tag">Canvas</li><li class="tag">JavaScript</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="project-card" data-category="graphic">
+                        <img src="images/mountains.svg" width="640" height="400" loading="lazy"
+                             alt="Grafika wektorowa przedstawiająca góry o zachodzie słońca">
+                        <div class="project-body">
+                            <h3>Ilustracje SVG</h3>
+                            <p>Seria prostych ilustracji wektorowych wykorzystywanych na moich stronach.</p>
+                            <ul class="tag-list">
+                                <li class="tag">SVG</li><li class="tag">Grafika</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <p id="gallery-empty" class="gallery-empty" hidden>Brak projektów w tej kategorii.</p>
+            </section>
+
+            <section class="section" aria-labelledby="video-title">
+                <div class="video-wrapper">
+                    <video controls preload="metadata" poster="images/video-poster.svg" width="640" height="360">
+                        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
+                        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+                        Twoja przeglądarka nie obsługuje odtwarzania wideo.
+                        <a href="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4">Pobierz plik wideo</a>.
+                    </video>
+                    <div>
+                        <p class="eyebrow">Wideo</p>
+                        <h2 id="video-title">Inspiracja</h2>
+                        <p>
+                            Krótki film o kwitnącym kwiecie — przypomina mi, że dobre projekty rosną
+                            stopniowo, krok po kroku, tak jak ta strona rozwijana na kolejnych laboratoriach.
+                        </p>
+                        <p class="field-hint">Źródło: MDN Web Docs, licencja CC0.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year">2026</span> Paweł Opocki</p>
+            <ul class="footer-links">
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

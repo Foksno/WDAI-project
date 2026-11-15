@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pl" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Doświadczenie i edukacja Pawła Opockiego.">
+    <title>Doświadczenie — Paweł Opocki</title>
+    <script>
+        document.documentElement.classList.remove("no-js");
+        try {
+            var t = localStorage.getItem("portfolio-theme");
+            if (t) document.documentElement.dataset.theme = t;
+            else if (window.matchMedia("(prefers-color-scheme: dark)").matches) document.documentElement.dataset.theme = "dark";
+        } catch (e) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Przejdź do treści</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Paweł<span>.</span>Opocki</a>
+            <nav class="main-nav" id="main-nav" aria-label="Nawigacja główna">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projekty.html">Projekty</a></li>
+                    <li><a href="doswiadczenie.html" aria-current="page">Doświadczenie</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="icon-button theme-toggle" type="button" aria-label="Zmień motyw">🌙</button>
+                <button class="icon-button nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Otwórz menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="container">
+            <header class="page-intro">
+                <p class="eyebrow">CV</p>
+                <h1>Doświadczenie i edukacja</h1>
+                <p class="lead">
+                    Najważniejsze etapy mojej nauki i pracy — od studiów, przez staż,
+                    po projekty realizowane po godzinach.
+                </p>
+            </header>
+
+            <section class="section" aria-labelledby="timeline-title">
+                <h2 id="timeline-title">Przebieg</h2>
+                <div class="table-wrapper">
+                    <table class="cv-table">
+                        <caption>Tabela przewija się poziomo na wąskich ekranach.</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Okres</th>
+                                <th scope="col">Organizacja</th>
+                                <th scope="col">Rola</th>
+                                <th scope="col">Zakres / technologie</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2024 – obecnie</td>
+                                <td>Politechnika — Informatyka</td>
+                                <td>Student</td>
+                                <td>Algorytmy, bazy danych, aplikacje internetowe</td>
+                            </tr>
+                            <tr>
+                                <td>07.2025 – 09.2025</td>
+                                <td>Lorem Software Sp. z o.o.</td>
+                                <td>Stażysta Front-end</td>
+                                <td>HTML, CSS, JavaScript, Git</td>
+                            </tr>
+                            <tr>
+                                <td>2025</td>
+                                <td>Projekt własny</td>
+                                <td>Autor</td>
+                                <td>Strona portfolio — HTML, CSS Grid, Flexbox</td>
+                            </tr>
+                            <tr>
+                                <td>03.2025</td>
+                                <td>Koło naukowe „Ipsum Dev”</td>
+                                <td>Członek zespołu</td>
+                                <td>Hackathon — aplikacja webowa w 24 h</td>
+                            </tr>
+                            <tr>
+                                <td>2024</td>
+                                <td>Dolor Academy</td>
+                                <td>Uczestnik kursu</td>
+                                <td>Certyfikat: Podstawy Pythona i SQL</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="section" aria-labelledby="skills-title">
+                <h2 id="skills-title">Kompetencje</h2>
+                <div class="card-grid">
+                    <article class="card">
+                        <h3>Front-end</h3>
+                        <ul class="tag-list">
+                            <li class="tag">HTML5</li><li class="tag">CSS3</li><li class="tag">Flexbox</li>
+                            <li class="tag">Grid</li><li class="tag">JavaScript</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <h3>Narzędzia</h3>
+                        <ul class="tag-list">
+                            <li class="tag">Git</li><li class="tag">GitHub</li><li class="tag">VS Code</li>
+                            <li class="tag">DevTools</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <h3>Inne</h3>
+                        <ul class="tag-list">
+                            <li class="tag">Python</li><li class="tag">SQL</li><li class="tag">Praca w zespole</li>
+                            <li class="tag">Angielski B2</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year">2026</span> Paweł Opocki</p>
+            <ul class="footer-links">
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

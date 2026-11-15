@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pl" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skontaktuj się z Pawłem Opockim.">
+    <title>Kontakt — Paweł Opocki</title>
+    <script>
+        document.documentElement.classList.remove("no-js");
+        try {
+            var t = localStorage.getItem("portfolio-theme");
+            if (t) document.documentElement.dataset.theme = t;
+            else if (window.matchMedia("(prefers-color-scheme: dark)").matches) document.documentElement.dataset.theme = "dark";
+        } catch (e) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Przejdź do treści</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Paweł<span>.</span>Opocki</a>
+            <nav class="main-nav" id="main-nav" aria-label="Nawigacja główna">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projekty.html">Projekty</a></li>
+                    <li><a href="doswiadczenie.html">Doświadczenie</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="icon-button theme-toggle" type="button" aria-label="Zmień motyw">🌙</button>
+                <button class="icon-button nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Otwórz menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="container">
+            <header class="page-intro">
+                <p class="eyebrow">Kontakt</p>
+                <h1>Napisz do mnie</h1>
+                <p class="lead">
+                    Masz pytanie, propozycję współpracy albo uwagę do któregoś projektu?
+                    Wypełnij formularz — odpowiem najszybciej, jak to możliwe.
+                </p>
+            </header>
+
+            <div class="contact-layout">
+                <aside class="card contact-info" aria-labelledby="info-title">
+                    <h2 id="info-title">Dane kontaktowe</h2>
+                    <ul>
+                        <li><strong>Lokalizacja</strong> Polska</li>
+                        <li><strong>GitHub</strong> <a href="https://github.com/" target="_blank" rel="noopener">github.com</a></li>
+                        <li><strong>Dostępność</strong> Staże i projekty studenckie</li>
+                    </ul>
+                </aside>
+
+                <section class="card" aria-labelledby="form-title">
+                    <h2 id="form-title">Formularz kontaktowy</h2>
+                    <p class="field-hint">Pola oznaczone <span class="required-mark" aria-hidden="true">*</span> są wymagane.</p>
+
+                    <form class="contact-form" id="contact-form" action="#" method="post">
+                        <div class="form-field">
+                            <label for="name">Imię</label>
+                            <input type="text" id="name" name="name" autocomplete="given-name"
+                                   maxlength="50" pattern="[A-Za-zÀ-ž \-]{2,50}"
+                                   data-pattern-message="Imię powinno mieć 2–50 liter (bez cyfr)."
+                                   placeholder="np. Anna" aria-describedby="name-error">
+                            <p class="field-error" id="name-error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="email">Adres e-mail <span class="required-mark" aria-hidden="true">*</span></label>
+                            <input type="email" id="email" name="email" autocomplete="email" required
+                                   maxlength="100" placeholder="np. anna@example.com" aria-describedby="email-error">
+                            <p class="field-error" id="email-error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="form-field form-field--full">
+                            <label for="topic">Temat <span class="required-mark" aria-hidden="true">*</span></label>
+                            <select id="topic" name="topic" required aria-describedby="topic-error">
+                                <option value="">— wybierz temat —</option>
+                                <option value="wspolpraca">Propozycja współpracy</option>
+                                <option value="staz">Oferta stażu / pracy</option>
+                                <option value="projekt">Pytanie o projekt</option>
+                                <option value="inne">Inne</option>
+                            </select>
+                            <p class="field-error" id="topic-error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="form-field form-field--full">
+                            <label for="message">Wiadomość <span class="required-mark" aria-hidden="true">*</span></label>
+                            <textarea id="message" name="message" required minlength="20" maxlength="1000"
+                                      placeholder="Opisz krótko, w czym mogę pomóc…"
+                                      aria-describedby="message-hint message-error"></textarea>
+                            <div class="field-hint" id="message-hint">
+                                <span>Od 20 do 1000 znaków.</span>
+                                <span id="char-count" aria-live="polite">0 / 1000</span>
+                            </div>
+                            <p class="field-error" id="message-error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="form-field form-field--full checkbox-field">
+                            <input type="checkbox" id="consent" name="consent" required aria-describedby="consent-error">
+                            <div>
+                                <label for="consent">Wyrażam zgodę na wykorzystanie moich danych w celu udzielenia odpowiedzi. <span class="required-mark" aria-hidden="true">*</span></label>
+                                <p class="field-error" id="consent-error" aria-live="polite"></p>
+                            </div>
+                        </div>
+
+                        <div class="form-field form-field--full">
+                            <div class="btn-row">
+                                <button class="btn" type="submit">Wyślij wiadomość</button>
+                                <button class="btn btn--outline" type="reset">Wyczyść</button>
+                            </div>
+                        </div>
+
+                        <p class="form-status" id="form-status" role="status" hidden></p>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year">2026</span> Paweł Opocki</p>
+            <ul class="footer-links">
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

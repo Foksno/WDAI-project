@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Pawła Opockiego — notatki z nauki tworzenia stron internetowych.">
+    <title>Blog — Paweł Opocki</title>
+    <script>
+        document.documentElement.classList.remove("no-js");
+        try {
+            var t = localStorage.getItem("portfolio-theme");
+            if (t) document.documentElement.dataset.theme = t;
+            else if (window.matchMedia("(prefers-color-scheme: dark)").matches) document.documentElement.dataset.theme = "dark";
+        } catch (e) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Przejdź do treści</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Paweł<span>.</span>Opocki</a>
+            <nav class="main-nav" id="main-nav" aria-label="Nawigacja główna">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projekty.html">Projekty</a></li>
+                    <li><a href="doswiadczenie.html">Doświadczenie</a></li>
+                    <li><a href="blog.html" aria-current="page">Blog</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="icon-button theme-toggle" type="button" aria-label="Zmień motyw">🌙</button>
+                <button class="icon-button nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Otwórz menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="container">
+            <article class="post">
+                <header>
+                    <p class="eyebrow">Blog</p>
+                    <h1>Moje pierwsze kroki w tworzeniu stron internetowych</h1>
+                    <div class="post-meta">
+                        <span class="author">Paweł Opocki</span>
+                        <time datetime="2026-10-12">12 października 2026</time>
+                        <span>4 min czytania</span>
+                    </div>
+                </header>
+
+                <p>
+                    Przygodę z tworzeniem stron zacząłem od najprostszego pliku <code>index.html</code>
+                    z jednym nagłówkiem i akapitem. Po otwarciu go w przeglądarce okazało się, że
+                    kilka linijek tekstu wystarczy, by zobaczyć efekt swojej pracy — i to było
+                    najbardziej motywujące.
+                </p>
+
+                <h2>Najpierw struktura, potem wygląd</h2>
+                <p>
+                    Pierwsza ważna lekcja: HTML opisuje <strong>znaczenie</strong> treści, a nie jej
+                    wygląd. Zamiast stawiać wszędzie <code>&lt;div&gt;</code>, warto użyć znaczników
+                    semantycznych — <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+                    <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code> czy <code>&lt;footer&gt;</code>.
+                    Dzięki temu strona jest czytelniejsza dla czytników ekranu, wyszukiwarek i dla mnie
+                    samego po kilku tygodniach.
+                </p>
+
+                <figure>
+                    <img src="images/laptop.svg" width="640" height="360"
+                         alt="Ilustracja laptopa z otwartym edytorem kodu HTML na ekranie">
+                    <figcaption>Edytor kodu i przeglądarka — dwa okna, między którymi przełączam się najczęściej.</figcaption>
+                </figure>
+
+                <h2>CSS: Flexbox i Grid</h2>
+                <p>
+                    Najwięcej czasu spędziłem na układaniu elementów. Flexbox świetnie sprawdza się
+                    w jednym wymiarze, np. w pasku nawigacji, a Grid — przy galeriach i układach
+                    kolumnowych. Połączenie <code>repeat(auto-fill, minmax(...))</code> sprawia,
+                    że kafelki same dopasowują się do szerokości ekranu bez ani jednego media query.
+                </p>
+
+                <blockquote>
+                    Dobra strona to nie ta, do której nie da się już nic dodać, ale ta, z której
+                    nie da się już nic usunąć.
+                </blockquote>
+
+                <h2>Czego się nauczyłem</h2>
+                <p>
+                    Warto od początku trzymać style w jednym, wspólnym pliku i korzystać ze zmiennych CSS.
+                    Zmiana koloru przewodniego w jednym miejscu aktualizuje cały serwis — tak działa
+                    też przełącznik jasnego i ciemnego motywu na tej stronie. Kolejnym krokiem jest
+                    JavaScript, o którym napiszę w następnym wpisie.
+                </p>
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year">2026</span> Paweł Opocki</p>
+            <ul class="footer-links">
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

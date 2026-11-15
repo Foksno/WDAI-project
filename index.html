@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pl" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Pawła Opockiego — student informatyki i początkujący front-end developer.">
+    <title>Paweł Opocki — Portfolio</title>
+    <script>
+        document.documentElement.classList.remove("no-js");
+        try {
+            var t = localStorage.getItem("portfolio-theme");
+            if (t) document.documentElement.dataset.theme = t;
+            else if (window.matchMedia("(prefers-color-scheme: dark)").matches) document.documentElement.dataset.theme = "dark";
+        } catch (e) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Przejdź do treści</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Paweł<span>.</span>Opocki</a>
+            <nav class="main-nav" id="main-nav" aria-label="Nawigacja główna">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="projekty.html">Projekty</a></li>
+                    <li><a href="doswiadczenie.html">Doświadczenie</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="icon-button theme-toggle" type="button" aria-label="Zmień motyw">🌙</button>
+                <button class="icon-button nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Otwórz menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="container">
+            <section class="section hero" aria-labelledby="hero-title">
+                <div>
+                    <p class="eyebrow">Student informatyki · Front-end</p>
+                    <h1 id="hero-title">Cześć, jestem Paweł 👋</h1>
+                    <p class="lead">
+                        Tworzę proste, czytelne i dostępne strony internetowe. Uczę się HTML, CSS
+                        i JavaScriptu, a na tej stronie zbieram swoje projekty, doświadczenie i notatki z nauki.
+                    </p>
+                    <div class="btn-row">
+                        <a class="btn" href="projekty.html">Zobacz projekty</a>
+                        <a class="btn btn--outline" href="kontakt.html">Napisz do mnie</a>
+                    </div>
+                </div>
+                <img class="hero-photo" src="images/avatar.svg" width="320" height="320"
+                     alt="Ilustracja awatara z inicjałami PO na niebieskim tle">
+            </section>
+
+            <section class="section" id="o-mnie" aria-labelledby="about-title">
+                <h2 id="about-title">O mnie</h2>
+                <div class="card-grid">
+                    <article class="card">
+                        <h3>Kim jestem</h3>
+                        <p>
+                            Studiuję informatykę na politechnice. Najbardziej interesuje mnie
+                            front-end — miejsce, w którym kod spotyka się z projektowaniem interfejsów.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <h3>Czym się zajmuję</h3>
+                        <p>
+                            Buduję responsywne strony w oparciu o semantyczny HTML, Flexbox i Grid.
+                            Dbam o czytelność, kontrast i działanie na telefonach.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <h3>Co dalej</h3>
+                        <p>
+                            Rozwijam umiejętności JavaScriptu i pracy z Gitem. Chcę zdobyć doświadczenie
+                            przy prawdziwych projektach w zespole.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section" aria-labelledby="skills-title">
+                <h2 id="skills-title">Umiejętności</h2>
+                <ul class="tag-list">
+                    <li class="tag">HTML5</li>
+                    <li class="tag">CSS3</li>
+                    <li class="tag">Flexbox</li>
+                    <li class="tag">CSS Grid</li>
+                    <li class="tag">JavaScript</li>
+                    <li class="tag">Git / GitHub</li>
+                    <li class="tag">Python</li>
+                    <li class="tag">SQL</li>
+                </ul>
+            </section>
+
+            <section class="section" aria-labelledby="latest-title">
+                <div class="section-header">
+                    <h2 id="latest-title">Ostatni wpis na blogu</h2>
+                    <a href="blog.html">Wszystkie wpisy &rarr;</a>
+                </div>
+                <article class="card">
+                    <h3><a href="blog.html">Moje pierwsze kroki w tworzeniu stron internetowych</a></h3>
+                    <p>
+                        Jak wyglądał mój start z HTML i CSS, co sprawiło mi najwięcej trudności
+                        i czego nauczyłem się, budując pierwszą stronę od zera.
+                    </p>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year">2026</span> Paweł Opocki</p>
+            <ul class="footer-links">
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
