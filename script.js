@@ -224,12 +224,15 @@ function initContactForm() {
 
         /* Strona jest statyczna — symulujemy wysłanie wiadomości */
         const name = form.elements.name.value.trim();
+
+        /* Najpierw czyścimy formularz (reset() wywołuje zdarzenie "reset",
+           które ukrywa komunikat), dopiero potem pokazujemy podziękowanie */
+        form.reset();
+        clearState();
+
         status.className = "form-status form-status--success";
         status.textContent = `Dziękuję${name ? ", " + name : ""}! Wiadomość została przygotowana do wysłania. Odpowiem najszybciej, jak to możliwe.`;
         status.hidden = false;
-
-        form.reset();
-        clearState();
     });
 
     /* Wspólne czyszczenie stanu (po wysłaniu i po kliknięciu „Wyczyść”) */
